@@ -1,5 +1,5 @@
 {
-  "name": "Court Reservation 2",
+  "name": "courtres2",
   "version": "2.0.0",
   "description": "Court Reservation Application",
   "main": "dist/server.js",
