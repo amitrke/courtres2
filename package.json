@@ -19,6 +19,7 @@
   ],
   "author": "Amit Kumar",
   "license": "MIT",
+  "engines" : { "node" : ">=4.2.0" },
   "dependencies": {
     "@angular/common": "4.1.0",
     "@angular/compiler": "4.1.0",
@@ -37,18 +38,18 @@
     "zone.js": "0.8.10"
   },
   "devDependencies": {
-    "concurrently": "^2.1.0",
+    "concurrently": "3.4.0",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-nodemon": "^2.2.1",
     "gulp-sourcemaps": "^2.6.0",
-    "gulp-tslint": "^4.3.3",
+    "gulp-tslint": "8.0.0",
     "gulp-typescript": "^3.1.6",
     "gulp-typings": "^2.0.4",
     "run-sequence": "^1.2.1",
     "ts-node": "^3.0.4",
-    "tslint": "^3.5.0",
+    "tslint": "5.2.0",
     "typescript": "^2.3.2"
   }
 }
