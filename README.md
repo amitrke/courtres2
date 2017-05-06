@@ -9,8 +9,8 @@ Basic Angular seed application created with Quick start application given on ang
 ## Steps to Run
 ```sh
     npm install
-    npm build
-    npm start
+    npm run build
+    npm run start
 ```
 
 ## Project Structure
