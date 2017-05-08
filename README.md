@@ -5,9 +5,7 @@
 [![Test Coverage](https://codeclimate.com/github/amitrke/courtres2/badges/coverage.svg)](https://codeclimate.com/github/amitrke/courtres2/coverage)
 [![Issue Count](https://codeclimate.com/github/amitrke/courtres2/badges/issue_count.svg)](https://codeclimate.com/github/amitrke/courtres2)
 
-# Angular2 with Gulp, Typescript, and Express Server
-
-###Complete Tutorial [https://moizkachwala.github.io/angular2-express-gulp-node/](https://moizkachwala.github.io/angular2-express-gulp-node/)
+# Court Reservation 2
 
 ##Introduction
 
@@ -46,12 +44,10 @@ angular2-express
 
 ## Dependencies
 
-1. Angular 2
+1. Angular 4
 2. TypeScript
 3. Gulp
 4. ExpressJS
 5. NodeJS
 6. Nodemon
 7. TsLint
-
-
