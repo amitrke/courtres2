@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/amitrke/courtres2.svg?branch=master)](https://travis-ci.org/amitrke/courtres2)
 [![Build Status](https://david-dm.org/amitrke/courtres2.svg?branch=master)](https://david-dm.org/amitrke/courtres2)
-
+[![devDependencies Status](https://david-dm.org/amitrke/courtres2/dev-status.svg)](https://david-dm.org/amitrke/courtres2?type=dev)
 [![Code Climate](https://codeclimate.com/github/amitrke/courtres2/badges/gpa.svg)](https://codeclimate.com/github/amitrke/courtres2)
 [![Test Coverage](https://codeclimate.com/github/amitrke/courtres2/badges/coverage.svg)](https://codeclimate.com/github/amitrke/courtres2/coverage)
 [![Issue Count](https://codeclimate.com/github/amitrke/courtres2/badges/issue_count.svg)](https://codeclimate.com/github/amitrke/courtres2)
