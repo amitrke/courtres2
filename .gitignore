@@ -89,3 +89,9 @@ gulpfile.js
 gulpfile.js.map
 .DS_Store
 yarn.lock
+
+#JS and map files in client and server folder
+/client/**/*.js
+/server/**/*.js
+/client/**/*.map
+/server/**/*.map
