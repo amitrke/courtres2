@@ -1,6 +1,6 @@
 import express = require('express');
 import path = require('path');
-import * as routes from "./controllers/routes";
+import * as routes from "./routes/routes";
 
 var port: number = process.env.PORT || 3000;
 var app = express();
