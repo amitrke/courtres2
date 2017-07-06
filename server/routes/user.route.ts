@@ -1,12 +1,18 @@
 /**
  * Created by amit on 7/2/17.
  */
-import * as express from "express";
+import {Router, Request, Response} from "express";
 
-let router:express.Router = express.Router();
-
-router.get('/', function (req, resp) {
-    resp.send('User get');
-})
-
-export = router;
+export class UserRouter{
+    
+    private router:Router = Router();
+    
+    getRouter():Router {
+        
+        this.router.get("/", (request:Request, response:Response) => {
+           response.json({"name":"John", "country":"France"}); 
+        });
+        
+        return this.router;
+    }
+}

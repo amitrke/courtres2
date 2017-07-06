@@ -1,13 +1,13 @@
 import express = require('express');
 import path = require('path');
-import * as routes from "./routes/routes";
+import {Routes} from "./routes/routes";
 
 var port: number = process.env.PORT || 3000;
 var app = express();
 
 app.use('/app', express.static(path.resolve(__dirname, 'app')));
 app.use('/libs', express.static(path.resolve(__dirname, 'libs')));
-app.use('/rest', routes);
+app.use('/rest', new Routes().getRouter());
 
 // for system.js to work. Can be removed if bundling.
 app.use(express.static(path.resolve(__dirname, '.')));

@@ -1,8 +1,13 @@
-import * as express from "express";
-import * as userCtlr from "./user.route"
+import {Router} from "express";
+import {UserRouter} from "./user.route"
 
-let router:express.Router = express.Router();
-
-router.use("/user", userCtlr);
-
-export = router;
+export class Routes {
+    
+    private router:Router = Router();
+    
+    getRouter():Router{
+        this.router.use("/user", new UserRouter().getRouter());
+        
+        return this.router;
+    }
+}
