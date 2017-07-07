@@ -2,7 +2,7 @@ import express = require('express');
 import path = require('path');
 import {Routes} from "./routes/routes";
 
-var port: number = process.env.PORT || 3000;
+var port = process.env.PORT || 3000;
 var app = express();
 
 app.use('/app', express.static(path.resolve(__dirname, 'app')));
