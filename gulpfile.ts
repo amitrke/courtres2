@@ -32,7 +32,6 @@ gulp.task('build:server', function () {
         .pipe(sourcemaps.init())
         .pipe(tsProject())
     return tsResult.js
-        //.pipe(concat('server.js'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('build'))
 });
