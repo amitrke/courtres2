@@ -32,6 +32,8 @@
     "@angular/platform-browser-dynamic": "4.2.6",
     "@angular/router": "4.2.6",
     "@angular/upgrade": "4.2.6",
+    "@types/winston": "^2.3.3",
+    "body-parser": "^1.17.2",
     "core-js": "2.4.1",
     "express": "4.15.3",
     "mongoose": "^4.11.1",
@@ -41,6 +43,7 @@
     "zone.js": "0.8.13"
   },
   "devDependencies": {
+    "@types/body-parser": "1.16.4",
     "concurrently": "3.5.0",
     "del": "3.0.0",
     "gulp": "^3.9.1",

@@ -1,9 +1,15 @@
 import express = require('express');
 import path = require('path');
 import {Routes} from "./routes/routes";
+import { json, urlencoded } from "body-parser";
 
 var port = process.env.PORT || 3000;
 var app = express();
+
+app.use(json());
+app.use(urlencoded({
+    extended: true
+}));
 
 app.use('/app', express.static(path.resolve(__dirname, 'app')));
 app.use('/libs', express.static(path.resolve(__dirname, 'libs')));
