@@ -143,5 +143,5 @@ gulp.task('start', function () {
  */
 
 gulp.task("build", function (callback) {
-    runSequence('clean', 'build:server', 'build:client', 'resources', 'libs', 'test:server', callback);
+    runSequence('clean', 'build:server', 'build:client', 'resources', 'libs', callback);
 });
