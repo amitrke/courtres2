@@ -14,7 +14,8 @@ const gulp = require("gulp"),
         concat = require('gulp-concat'),
         runSequence = require('run-sequence'),
         nodemon = require('gulp-nodemon'),
-        gulpTypings = require("gulp-typings");
+        gulpTypings = require("gulp-typings"),
+        gmocha = require('gulp-mocha');
 
 /**
  * Remove build directory.
@@ -22,6 +23,15 @@ const gulp = require("gulp"),
 gulp.task('clean', (cb) => {
     return del(["build"], cb);
 });
+
+/**
+ * Server tests
+ */
+gulp.task('test:server', () =>
+	gulp.src('./build/tests/**/*.spec.js', {read: false})
+		// `gulp-mocha` needs filepaths so you can't have any plugins before it
+		.pipe(gmocha({reporter: 'nyan'}))
+);
 
 /**
  * Build Express server
@@ -133,5 +143,5 @@ gulp.task('start', function () {
  */
 
 gulp.task("build", function (callback) {
-    runSequence('clean', 'build:server', 'build:client', 'resources', 'libs', callback);
+    runSequence('clean', 'build:server', 'build:client', 'resources', 'libs', 'test:server', callback);
 });
