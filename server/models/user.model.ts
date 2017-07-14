@@ -18,7 +18,7 @@ const schema = new Schema({
     },
    uid: {
         type: String,
-        required: true
+        required: false
     }
 });
 /*
