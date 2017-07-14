@@ -1,6 +1,22 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=bca24fa4cebea5511a84c307f7385e207f35347ecc08667b3af71a779c22b908
+    - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
+
 language: node_js
 node_js:
 - v6.9.5
 
 before_script:
 - npm run build
+#- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+#  - chmod +x ./cc-test-reporter
+#script:
+#  - bundle exec rspec
+  # Preferably you will run test-reporter on branch update events. But 
+  # if you setup travis to build PR updates only, you don't need to run 
+  # the line below
+#  - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
+  # In the case where travis is setup to build PR updates only, 
+  # uncomment the line below
+  # - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT

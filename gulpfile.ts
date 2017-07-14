@@ -15,7 +15,8 @@ const gulp = require("gulp"),
         runSequence = require('run-sequence'),
         nodemon = require('gulp-nodemon'),
         gulpTypings = require("gulp-typings"),
-        gmocha = require('gulp-mocha');
+        gmocha = require('gulp-mocha'),
+        cover = require('gulp-coverage');
 
 /**
  * Remove build directory.
@@ -29,8 +30,17 @@ gulp.task('clean', (cb) => {
  */
 gulp.task('test:server', () =>
 	gulp.src('./build/tests/**/*.spec.js', {read: false})
+	   .pipe(cover.instrument({
+                    pattern: ['**/tests*'],
+                    debugDirectory: 'debug'
+                }))
+                .pipe(gmocha())
+                .pipe(cover.gather())
+                .pipe(cover.format())
+                .pipe(gulp.dest('reports'))
+                
 		// `gulp-mocha` needs filepaths so you can't have any plugins before it
-		.pipe(gmocha({reporter: 'nyan'}))
+		//.pipe(gmocha({reporter: 'mocha-lcov-reporter'}))
 );
 
 /**
