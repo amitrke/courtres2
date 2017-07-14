@@ -2,6 +2,7 @@ import express = require('express');
 import path = require('path');
 import {Routes} from "./routes/routes";
 import { json, urlencoded } from "body-parser";
+import * as http from "http";
 
 var port = process.env.PORT || 3000;
 var app = express();
@@ -25,8 +26,12 @@ var renderIndex = (req: express.Request, res: express.Response) => {
 
 app.get('/*', renderIndex);
 
-var server = app.listen(port, function() {
+const server:http.Server = app.listen(port, function() {
     var host = server.address().address;
     var port = server.address().port;
     console.log('This express app is listening on port:' + port);
 });
+
+//const server: http.Server = app.listen(3003);
+
+export { server };
