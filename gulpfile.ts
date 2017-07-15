@@ -1,8 +1,3 @@
-/**
- * Created by Moiz.Kachwala on 08-06-2016.
- */
-
-
 "use strict";
 
 const gulp = require("gulp"),
@@ -15,8 +10,7 @@ const gulp = require("gulp"),
         runSequence = require('run-sequence'),
         nodemon = require('gulp-nodemon'),
         gulpTypings = require("gulp-typings"),
-        gmocha = require('gulp-mocha'),
-        cover = require('gulp-coverage');
+        gmocha = require('gulp-mocha');
 
 /**
  * Remove build directory.
@@ -30,17 +24,7 @@ gulp.task('clean', (cb) => {
  */
 gulp.task('test:server', () =>
 	gulp.src('./build/tests/**/*.spec.js', {read: false})
-	   .pipe(cover.instrument({
-                    pattern: ['**/tests*'],
-                    debugDirectory: 'debug'
-                }))
-                .pipe(gmocha())
-                .pipe(cover.gather())
-                .pipe(cover.format())
-                .pipe(gulp.dest('reports'))
-                
-		// `gulp-mocha` needs filepaths so you can't have any plugins before it
-		//.pipe(gmocha({reporter: 'mocha-lcov-reporter'}))
+		.pipe(gmocha({reporter: 'nyan'}))
 );
 
 /**
