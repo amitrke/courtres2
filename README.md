@@ -2,16 +2,11 @@
 [![Build Status](https://david-dm.org/amitrke/courtres2.svg?branch=master)](https://david-dm.org/amitrke/courtres2)
 [![devDependencies Status](https://david-dm.org/amitrke/courtres2/dev-status.svg)](https://david-dm.org/amitrke/courtres2?type=dev)
 [![Code Climate](https://codeclimate.com/github/amitrke/courtres2/badges/gpa.svg)](https://codeclimate.com/github/amitrke/courtres2)
-[![Test Coverage](https://codeclimate.com/github/amitrke/courtres2/badges/coverage.svg)](https://codeclimate.com/github/amitrke/courtres2/coverage)
 [![Issue Count](https://codeclimate.com/github/amitrke/courtres2/badges/issue_count.svg)](https://codeclimate.com/github/amitrke/courtres2)
 
 # Court Reservation 2
 
-##Introduction
-
-This project is a complete rewrite of courtres
-I am rewriting from scratch because I wanted to use Express, Typescript, Angular 4 for this project.
-The application can be used by a sports facility to reserve courts for its members, some of the features include..
+This project is work-in-progess, Once complete it can be used by a sports facility to reserve courts for its members, some of the features include..
 * Member signup
 * Facility to checkin members as they come to play
 * Checked in members can reserve the court using their smartphone or the facility admin can reserve court for them
