@@ -95,3 +95,6 @@ yarn.lock
 /server/**/*.js
 /client/**/*.map
 /server/**/*.map
+
+.coverrun
+reports/

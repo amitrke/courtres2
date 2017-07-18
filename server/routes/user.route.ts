@@ -16,8 +16,14 @@ export class UserRouter{
         });
         
         this.router.post("/", async(request: Request, response: Response) => {
-            const user = await User.create(request.body);
-            response.status(200).json(user);
+            try{
+                const user = await User.create(request.body);
+                response.status(200).json(user);
+            }
+            catch(err){
+                console.log("Error: "+err.message);
+            }
+            
         });
         
         return this.router;

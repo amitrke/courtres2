@@ -16,10 +16,10 @@ const schema = new Schema({
         type: String,
         required: true
     },
-   uid: {
+   id: {
         type: String,
-        required: false
-    }
+        required: true
+   } 
 });
 /*
 schema.static("updateUser", (author: {}, description: string) => {

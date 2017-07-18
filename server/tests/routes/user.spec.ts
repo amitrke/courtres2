@@ -15,7 +15,7 @@ describe("Api User", function(): void {
             .set("content-type", "application/json")
             .send({
                 name: "Someone",
-                uid: "..."
+                id: "..."
             })
             .end((err:Error, res: any): void => {
                 expect(res.statusCode).to.be.equal(200);
